@@ -1,0 +1,37 @@
+COMANDOS PARA:
+
+- Corregir error de carga de expo por cambio de IP en el dispositivo:
+    setx /M REACT_NATIVE_PACKAGER_HOSTNAME (aqui va la IP sin los parentesis)
+
+- Actualizar solo una dependencia según la versión que necesites:
+    npm install (dependencia)@(versión)
+
+- En caso de descargar la aplicación siga los siguientes pasos:
+    1. Dentro del repositorio de Github, clic en "Code" y elija una forma para descargar el código.
+
+    2. Ya sea utilizando Github Desktop o Git clone el repositorio.
+        - Si es con Git, situado en la carpeta donde requiere descargarlo de clic derecho 
+        y seleccione "Open with Git Bash here".
+        - Seguido de ello (y solo si esta sincronizado con una cuenta) escriba lo siguiente:
+                        git clone (copie la URL que esta en el repositorio para clonarlo del modo HTTPS u otro modo)
+                        git clone https://github.com/iLabTDI/ClassGenda.git
+
+    3. Una vez clonado, acceda a el por medio de Visual Studio y abra una terminal
+        (puede ser tanto PowerShell como Bash).
+        - Dentro de ella ejecute los siguientes comandos:
+            npm install (para instalar los paquetes para la app)
+            npx expo start (para iniciar la app)
+        - En caso de presentar error de carga de la app, termine la sesión (Ctrl + C).
+            - Elimine el archivo package-lock.json y la carpeta de node_modules.
+            - Seguido de esto, ejecute de nuevo:
+                    npm install
+                    npx expo start
+
+- Para recargar la app presione:
+    R
+
+- Para cerrar la app:
+    Ctrl + C
+
+- Para desinstalar dependencias:
+    npm uninstall (nombre de la dependencia)
